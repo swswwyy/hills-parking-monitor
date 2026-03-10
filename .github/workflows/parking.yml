@@ -1,0 +1,21 @@
+name: Hills Parking Push
+
+on:
+  schedule:
+    - cron: '15 19 * * 1-5'
+    - cron: '15 20 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  push-parking:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run parking monitor
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 hills_parking_push.py
