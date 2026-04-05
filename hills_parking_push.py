@@ -39,8 +39,8 @@ from collections import deque
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "hills-parking-my-channel-2026")
 
 # 推送时间窗口（悉尼本地时间）
-WINDOW_START = (20, 20)    # 06:00
-WINDOW_END   = (20, 30)   # 07:30
+WINDOW_START = (06, 00)    # 06:00
+WINDOW_END   = (07, 30)   # 07:30
 
 # 空余率阈值：高于此值用"宽松间隔"，低于用"紧密间隔"
 THRESHOLD_PCT = 40.0
