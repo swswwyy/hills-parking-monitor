@@ -36,10 +36,10 @@ from collections import deque
 # ============================================================
 
 # 从环境变量读取（GitHub Actions 推荐），没有则用默认值
-NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "hills-parking-my-channel-2024")
+NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "hills-parking-my-channel-2026")
 
 # 推送时间窗口（悉尼本地时间）
-WINDOW_START = (20, 0)    # 06:00
+WINDOW_START = (20, 20)    # 06:00
 WINDOW_END   = (20, 30)   # 07:30
 
 # 空余率阈值：高于此值用"宽松间隔"，低于用"紧密间隔"
