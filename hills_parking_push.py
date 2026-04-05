@@ -7,7 +7,7 @@ Hills Showground Park&Ride 空余车位推送脚本（云端版）
   · 空余 > 40%：每 5 分钟推送一次
   · 空余 ≤ 40%：每 1 分钟推送一次
               + 根据历史数据预测车位耗尽时间
-
+h
 【云端部署 - GitHub Actions】
   1. 仓库结构：
        parking-monitor/
@@ -41,8 +41,8 @@ from collections import deque
 NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "hills-parking-my-channel-2024")
 
 # 推送时间窗口（悉尼本地时间）
-WINDOW_START = (6, 15)   # 06:15
-WINDOW_END   = (7, 15)   # 07:15
+WINDOW_START = (6, 0)    # 06:00（提前15分钟，应对GitHub延迟）
+WINDOW_END   = (7, 30)   # 07:30（延后15分钟，应对GitHub延迟）
 
 # 空余率阈值：高于此值用"宽松间隔"，低于用"紧密间隔"
 THRESHOLD_PCT = 40.0
