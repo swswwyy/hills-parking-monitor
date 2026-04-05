@@ -1,9 +1,9 @@
-    name: Hills Parking Push
+name: Hills Parking Push
 
 on:
   schedule:
-        - cron: '0 19 * * 1-5'  # UTC 19:00 = 悉尼夏令时 06:00 (AEDT, Oct-Apr)
-        - cron: '0 20 * * 1-5'  # UTC 20:00 = 悉尼冬令时 06:00 (AEST, Apr-Oct)
+    - cron: '0 19 * * 1-5'
+    - cron: '0 20 * * 1-5'
   workflow_dispatch:
 
 jobs:
