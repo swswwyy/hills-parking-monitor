@@ -38,7 +38,7 @@ from collections import deque
 # ============================================================
 
 # 从环境变量读取（GitHub Actions 推荐），没有则用默认值
-NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "hills-parking-my-channel-2024")
+NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "hills-parking-my-channel-2026")
 
 # 推送时间窗口（悉尼本地时间）
 WINDOW_START = (6, 0)    # 06:00（提前15分钟，应对GitHub延迟）
