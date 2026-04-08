@@ -2,7 +2,7 @@ name: Hills Parking Push
 
 on:
   schedule:
-    - cron: '0 19 * * 1-5'
+        # - cron: '0 19 * * 1-5'  # 夏令时 AEDT(UTC+11) 06:00，10月~4月启用
     - cron: '0 20 * * 1-5'
   workflow_dispatch:
 
